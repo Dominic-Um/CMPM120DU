@@ -30,7 +30,7 @@ class Engine {
     addItem(itemName) {
         if (!this.hasItem(itemName)) {
             this.inventory.push(itemName);
-            this.show(`<em>You picked up: ${itemName}</em>`);
+            this.show(`You picked up: ${itemName}`);
         }
     }
 
