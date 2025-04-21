@@ -1,0 +1,99 @@
+{
+    "Title": "Dark Dungeons 2.9",
+    "Credits": "Created by Dominic Umbrasas (dumbrasa@ucsc.edu), (original code by Adam Smith amsmith@ucsc.edu).",
+    "InitialLocation": "Living Room",
+    "Locations": {
+      "Living Room": {
+        "Body": "This is a large living room with an imposingly high ceiling with wooden arches.",
+        "Choices": [
+          {
+            "Text": "South",
+            "Target": "Dungeon"
+          },
+          {
+            "Text": "East",
+            "Target": "Chamber"
+          }
+        ]
+      },
+      "Chamber": {
+        "Body": "This is a great chamber with a heavy, extravagant desk of engraved wood. A hefty, antique skeleton key lies atop it.",
+        "Choices": [
+          {
+            "Text": "Take the Hefty Key",
+            "Target": "Chamber Key Taken"
+          },
+          {
+            "Text": "Read Note",
+            "Target": "Note"
+          },
+          {
+            "Text": "West",
+            "Target": "Living Room"
+          }
+        ]
+      },
+      "Chamber Key Taken": {
+        "Body": "You take the hefty skeleton key. It feels cold and ancient in your hand.",
+        "Items": ["Hefty Key"],
+        "Choices": [
+          {
+            "Text": "West",
+            "Target": "Living Room"
+          }
+        ]
+      },
+      "Note": {
+        "Body": "The note reads, in cursive: You are hereby notified to leave the premises in a week after the delivery of this notice to you.",
+        "Choices": [
+          {
+            "Text": "Stop reading",
+            "Target": "Chamber"
+          }
+        ]
+      },
+      "Dungeon": {
+        "Body": "This is a dungeon with torches intermittently placed at an equal distance apart. A heavy set of engraved doors blocks the southern passage.",
+        "Choices": [
+          {
+            "Text": "North",
+            "Target": "Living Room"
+          },
+          {
+            "Text": "South",
+            "Target": "Scenic Field",
+            "KeyRequired": "Hefty Key"
+          }
+        ]
+      },
+      "Scenic Field": {
+        "Body": "You unlock the heavy doors with the antique key. Ascending the steps of undulating stone following the daylight, you see a scenic field of knee-length dry grass.",
+        "Choices": [
+          {
+            "Text": "North",
+            "Target": "Dungeon"
+          },
+          {
+            "Text": "South",
+            "Target": "Trail"
+          }
+        ]
+      },
+      "Trail": {
+        "Body": "This is an earthen trail, it has wheel tracks on it.",
+        "Choices": [
+          {
+            "Text": "North",
+            "Target": "Scenic Field"
+          },
+          {
+            "Text": "South",
+            "Target": "Beyond"
+          }
+        ]
+      },
+      "Beyond": {
+        "Body": "There are two ways forward..."
+      }
+    }
+  }  
